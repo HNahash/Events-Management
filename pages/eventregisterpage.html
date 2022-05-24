@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/registerform.css">
+    <link rel="stylesheet" href="../style/form.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event registeration</title>
+</head>
+<body>
+        <!-- Page Header -->
+        <div class="header">
+            <div class="header-left">
+              <a id="profile-link" class="header-nav prof">
+                <p><i class="fa-solid fa-address-card"></i></p>
+                <p>profile</p>
+              </a>
+              <a class="header-nav home active" href="#"><i class="fa-solid fa-house"></i> KFUPM</a>
+              <a class="header-nav" href="./Homepage.html">Events</a>
+              <a class="header-nav" href="./clubspage.html">Clubs</a>
+              <a class="header-nav" href="./aboutus.html">About</a>
+            </div>
+            
+            <button type="button" class="form-button" onclick="signOut()">Sign Out/Sign In</button>
+          </div>
+
+          <!-- registeration form -->
+          <div class="register-form">
+            <h4 class="form-center form-title">Register</h4>
+            <form class="r-form-content" id="event-r-form">
+              <div class="form-first-sec">
+                <input type="text" class="form-txt" name="name" placeholder="Event Name" required>
+                <input type="text" class="form-txt" name="date" placeholder="Date" required>
+                <input type="text" class="form-txt" name="location" placeholder="Location" required>
+  
+                <select class="form-txt form-dropdown" name="attType" name="Attendance_type" required>
+                  <option value="physical">Physical</option>
+                  <option value="online">Online</option>
+                </select>
+
+                <input type="text" class="form-txt" name="speakerName" placeholder="Speaker Name" required>
+                <input type="text" class="form-txt" name="numSeats" placeholder="Num. of seats" required>
+  
+                <select class="form-txt form-dropdown" name="gender" name="Gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">female</option>
+                </select>  
+
+                <input type="text" class="form-txt" name="fees" placeholder="Fees (Optional)">
+                <input type="text" class="form-txt" name="desc" placeholder="Description" required>
+                <input type="text" class="form-txt" name="time" placeholder="Time" required>
+
+
+                <br>
+                <div>
+                    <label class="form-lbl form-lbl-opacity" for="img">Upload image:</label>
+                    <input class="form-lbl" type="file" name="img" id="img" name="img" accept="image/*" required>
+                </div>
+              </div>
+
+              <div class="form-second-sec">
+                <h4 class="form-second-sec-title">Category</h4>
+                <input type="checkbox" id="knowledge" name="Preference 1" value="knowledge">
+                <label for="knowledge">knowledge</label><br>
+                <input type="checkbox" id="Technology" name="Preference 2" value="Technology">
+                <label for="Technology">Technology</label><br>
+                <input type="checkbox" id="Entertainment" name="Preference 3" value="Entertainment">
+                <label for="Entertainment">Entertainment</label>
+                <br>
+                <br>
+                <br>
+                <button id="RegiEvent" type="submit" class="form-button form-center" role="button">Register</button>
+              </div>
+            </form>
+          </div>
+
+        <!-- Footer -->
+      <div class="footer">
+        <div class="f-row">
+          <div class="f-column">
+            <h4>Contacts</h5>
+            <p class="f-info"><i class="fa-solid fa-phone"></i> 013 860 0000</p>
+            <p class="f-info"><i class="fa-solid fa-envelope"></i> info@kfupm.edu.sa</p>
+          </div>
+          <div class="f-column">
+            <h4>Follow KFUPM events</h5>
+              <a class="f-info" href="https://twitter.com/KFUPM_Event"> <i class="fa-brands fa-twitter"></i> Twitter</a>
+              <a class="f-info" href="https://www.instagram.com/kfupm_event/?hl=en"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+      <!-- Config firebase -->
+      <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+      
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+      
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="../database/config.js"></script>
+      <!-- Js -->
+      <script src="../database/app.js"></script>
+</body>
+</html>

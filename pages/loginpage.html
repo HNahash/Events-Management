@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+      <!-- Page Header -->
+      <div class="header">
+        <div class="header-left">
+          <a href="#" class="header-nav prof">            
+            <p><i class="fa-solid fa-address-card"></i></p>
+            <p>profile</p>
+        </a>
+          <a class="header-nav home active" href="#"><i class="fa-solid fa-house"></i> KFUPM</a>
+          <a class="header-nav" href="./Homepage.html">Events</a>
+          <a class="header-nav" href="./clubspage.html">Clubs</a>
+          <a class="header-nav" href="./aboutus.html">About</a>
+        </div>
+        
+        <button type="button" class="form-button" onclick="signOut()">Sign Out/Sign In</button>
+      </div>
+
+        <!-- Login form -->
+      <body>
+        <div class="login-form"">
+          <div id="signInForm">
+              <h2 class="form-center">Login</h2>
+              <div class="form-group">
+                  <label for="userSIEmail">Email adress<span class="text-danger ml-1">*</span></label>
+                  <input type="email" class="form-txt" id="userSIEmail" onblur="checkUserSIEmail()"placeholder="mail@mail.com">
+                  <small id="userSIEmailError" class="text-danger">Please check your login information.</small>
+              </div>
+              <div class="form-group">
+                  <label for="userSIPassword">Password<span class="text-danger ml-1">*</span></label>
+                  <input type="password" class="form-txt" id="userSIPassword" onblur="checkUserSIPassword()" placeholder="password">
+                  <small id="userSIPasswordError" class="form-text text-danger">Please check your password.</small>
+              </div>
+              <br>
+              <br>
+              <button type="button" class="form-button form-center" onclick="signIn()">Login</button>
+              <br>
+              <br>
+              <p class="form-center"><a href="./userregisterpage.html">Don't have an Account?</a></p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+      <div class="footer">
+        <div class="f-row">
+          <div class="f-column">
+            <h4>Contacts</h5>
+            <p class="f-info"><i class="fa-solid fa-phone"></i> 013 860 0000</p>
+            <p class="f-info"><i class="fa-solid fa-envelope"></i> info@kfupm.edu.sa</p>
+          </div>
+          <div class="f-column">
+            <h4>Follow KFUPM events</h5>
+              <a class="f-info" href="https://twitter.com/KFUPM_Event"> <i class="fa-brands fa-twitter"></i> Twitter</a>
+              <a class="f-info" href="https://www.instagram.com/kfupm_event/?hl=en"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Config firebase -->
+      <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+      
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+      
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+      
+      <script src="../database/config.js"></script>
+      <!-- Js -->
+      <script src="../database/app.js"></script>
+    </body>
+</html>

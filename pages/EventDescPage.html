@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/eventDesc.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/form.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body onload="DisplayEventDesc();">
+    <!-- Page Header -->
+    <div class="header">
+        <div class="header-left">
+          <a id="profile-link" class="header-nav prof">
+            <p><i class="fa-solid fa-address-card"></i></p>
+            <p>profile</p>
+          </a>
+          <a class="header-nav home active" href="#"><i class="fa-solid fa-house"></i> KFUPM</a>
+          <a class="header-nav" href="./Homepage.html">Events</a>
+          <a class="header-nav" href="./clubspage.html">Clubs</a>
+          <a class="header-nav" href="./aboutus.html">About</a>
+        </div>
+        
+        <button type="button" class="form-button" onclick="signOut()">Sign Out/Sign In</button>
+      </div>
+      
+      <!-- Event Description -->   
+            <img class="img" src="../Rectangle 10.png"/>
+            
+        <div class="row">
+            <div class="column">
+                <H1 id="e-name" class="col-event-name">Name</H1>
+                <div id="e-desc" class="description">
+                <h2 class="Desc">Description</h2>
+                <p id="e-brief" class="brief"></p>
+                </div>
+            </div>
+
+            <div class="column">  
+              <p id="e-TAG" class="col-details"></p>
+              <div class="col-div">
+                <h3>Details</h3>
+                <p id="e-date"><i class="fa-solid fa-calendar-days"></i></p>
+                <p id="e-time"><i class="fa-regular fa-clock"></i></p>
+                <p id="e-location"><i class="fa-solid fa-location" ></i></p>
+                <p id="e-gender"><i class="fa-solid fa-male"></i> <i class="fa-solid fa-female"></i></p>
+                <p id="e-fees"><i class="fa-solid fa-dollar"></i></p>
+              </div>
+              <button id="Regi" class="col-button" role="button">Register</button>
+            </div>
+
+        </div>
+
+          
+      </div>
+       
+      <!-- Footer -->
+      <div class="footer">
+        <div class="f-row">
+          <div class="f-column">
+            <h4>Contacts</h5>
+            <p class="f-info"><i class="fa-solid fa-phone"></i> 013 860 0000</p>
+            <p class="f-info"><i class="fa-solid fa-envelope"></i> info@kfupm.edu.sa</p>
+          </div>
+          <div class="f-column">
+            <h4>Follow KFUPM events</h5>
+              <a class="f-info" href="https://twitter.com/KFUPM_Event"> <i class="fa-brands fa-twitter"></i> Twitter</a>
+              <a class="f-info" href="https://www.instagram.com/kfupm_event/?hl=en"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+      
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+      
+      <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+      
+      <script src="../database/config.js"></script>
+      <!-- Js -->
+      <script src="../database/app.js"></script>
+      <script src="../database/Event.js"></script>
+</body>
+</html>

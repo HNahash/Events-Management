@@ -1,0 +1,64 @@
+
+.img{
+    height: 350px;
+    width: 100%;
+}
+
+.row{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    width: 100%;
+}
+.column{
+    width: 60% 
+
+}
+
+.col-event-name, .Desc, .brief, .col-details, .col-div {
+    margin-bottom: 10px;
+}
+
+.Desc{
+    border-bottom: 1px solid black;
+}
+
+.description{
+    margin-top: 30px;
+    background-color: rgb(226, 220, 220);
+    padding: 10px;
+}
+
+.column:last-child{
+    margin-left: 100px;
+    width: 40%;
+    background-color: #F9F4F4;
+    padding: 15px;
+}
+
+.col-div{
+    padding-top: 20px;
+    padding-left: 10px;
+
+}
+.col-button {
+    background: #1a8839;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    display: block;
+    margin: auto;
+  }

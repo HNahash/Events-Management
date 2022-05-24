@@ -1,0 +1,26 @@
+.about-us-content {
+    padding: 50px;
+}
+
+.column {
+    
+    width: 50%;
+    color: #000;
+    border-bottom: #817F7F solid 1px;
+    color: #2A8809;
+}
+
+.about-us-page-br {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+
+.Members {
+    margin-left: 50px;
+}
+
+.tab {
+    text-align: left;
+    margin-bottom: 10px;
+}
